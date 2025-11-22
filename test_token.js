@@ -7,7 +7,7 @@ const mainetcn = require('./index.js')
 // 你的 Token
 let token = {
   ult: '12c4b77a644b9e88a14ab3957aea7703',
-  userId: '2005990419238350'
+  userId: '1646862433816015'
 }
 
 async function testAPI() {
