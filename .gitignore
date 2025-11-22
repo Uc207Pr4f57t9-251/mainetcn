@@ -109,3 +109,19 @@ latest_token.json
 
 # Output directory (data files)
 output/
+
+# Data directory (play history, etc.)
+data/
+
+# Export directory
+exports/
+
+# Capture data (sensitive)
+capture.zip
+二维码图像/
+二维码进入/
+游玩记录/
+游玩记录2/
+系统首页/
+系统首页2/
+系统首页3/
