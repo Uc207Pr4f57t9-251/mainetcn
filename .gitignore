@@ -102,3 +102,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Token files (sensitive information)
+token.json
+latest_token.json
+
+# Output directory (data files)
+output/
