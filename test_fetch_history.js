@@ -14,6 +14,8 @@ const axios = require('axios');
 // 配置
 const CONFIG = {
   tokenFile: path.join(__dirname, 'token.json'),
+  dataDir: path.join(__dirname, 'data'),
+  databaseFile: path.join(__dirname, 'data', 'play_history_db.json'),
   baseUrl: 'https://maimai.wahlap.com/maimai-mobile',
   userAgent: 'Mozilla/5.0 (Linux; Android 15; PJZ110 Build/AP3A.240617.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 XWEB/1160117 MMWEBSDK/20250201 MMWEBID/2253 MicroMessenger/8.0.57.2800(0x28003940) WeChat/arm64 Weixin GPVersion/1 NetType/4G Language/zh_CN ABI/arm64'
 };
@@ -56,6 +58,90 @@ function printSubDivider(title = '') {
   } else {
     console.log(line);
   }
+}
+
+// 确保数据目录存在
+function ensureDataDir() {
+  if (!fs.existsSync(CONFIG.dataDir)) {
+    fs.mkdirSync(CONFIG.dataDir, { recursive: true });
+    log('DEBUG', `创建数据目录: ${CONFIG.dataDir}`);
+  }
+}
+
+// 生成记录唯一ID
+// 使用 trackId 作为主要标识，如果没有则使用组合键
+function generateRecordId(record) {
+  if (record.trackId) {
+    return `track_${record.trackId}`;
+  }
+  // 备用方案：使用曲目+难度+日期+达成率组合
+  const key = `${record.title}_${record.diff}_${record.date}_${record.percentage}`;
+  return `combo_${Buffer.from(key).toString('base64').replace(/[=+/]/g, '')}`;
+}
+
+// 加载数据库
+function loadDatabase() {
+  ensureDataDir();
+
+  try {
+    if (fs.existsSync(CONFIG.databaseFile)) {
+      const data = JSON.parse(fs.readFileSync(CONFIG.databaseFile, 'utf8'));
+      log('DEBUG', `数据库加载成功，已有 ${data.records.length} 条记录`);
+      return data;
+    }
+  } catch (err) {
+    log('WARN', `数据库加载失败: ${err.message}，将创建新数据库`);
+  }
+
+  // 返回空数据库结构
+  return {
+    version: 1,
+    createdAt: new Date().toISOString(),
+    lastUpdated: null,
+    totalFetches: 0,
+    records: [],
+    recordIndex: {} // 用于快速查找的索引 { recordId: true }
+  };
+}
+
+// 保存数据库
+function saveDatabase(db) {
+  ensureDataDir();
+  db.lastUpdated = new Date().toISOString();
+  fs.writeFileSync(CONFIG.databaseFile, JSON.stringify(db, null, 2));
+  log('DEBUG', `数据库已保存，共 ${db.records.length} 条记录`);
+}
+
+// 将新记录添加到数据库（去重）
+function addRecordsToDatabase(db, newRecords) {
+  const addedRecords = [];
+  const duplicateCount = { total: 0 };
+
+  for (const record of newRecords) {
+    const recordId = generateRecordId(record);
+
+    // 检查是否已存在
+    if (db.recordIndex[recordId]) {
+      duplicateCount.total++;
+      continue;
+    }
+
+    // 添加元数据
+    const enrichedRecord = {
+      ...record,
+      _id: recordId,
+      _fetchedAt: new Date().toISOString()
+    };
+
+    // 添加到数据库
+    db.records.push(enrichedRecord);
+    db.recordIndex[recordId] = true;
+    addedRecords.push(enrichedRecord);
+  }
+
+  db.totalFetches++;
+
+  return { addedRecords, duplicateCount: duplicateCount.total };
 }
 
 // 读取token
@@ -104,7 +190,7 @@ function buildHeaders(token) {
 
 // 测试连接
 async function testConnection(token) {
-  log('STEP', '步骤2: 测试与舞萌服务器的连接');
+  // 注意：步骤号由调用方日志输出
 
   const url = `${CONFIG.baseUrl}/home/`;
   log('DEBUG', `请求URL: ${url}`);
@@ -446,9 +532,38 @@ function saveTestResult(records, token) {
   }
 }
 
+// 打印新增记录
+function printNewRecords(addedRecords) {
+  printSubDivider('新增记录');
+
+  if (addedRecords.length === 0) {
+    console.log('  \x1b[33m没有新增记录（全部为已存在的重复记录）\x1b[0m');
+    return;
+  }
+
+  console.log(`  \x1b[32m本次新增 ${addedRecords.length} 条记录\x1b[0m\n`);
+
+  // 打印所有新增记录
+  const displayCount = Math.min(10, addedRecords.length);
+  for (let i = 0; i < displayCount; i++) {
+    const r = addedRecords[i];
+    const fc = r.fc ? ` [\x1b[33m${r.fc}\x1b[0m]` : '';
+    const fs = r.fs ? ` [\x1b[36m${r.fs}\x1b[0m]` : '';
+    const rate = r.rate ? `\x1b[32m${r.rate}\x1b[0m` : '-';
+    const dxTag = r.isDx ? '\x1b[35m[DX]\x1b[0m ' : '';
+
+    console.log(`  \x1b[32m+\x1b[0m ${dxTag}${r.title}`);
+    console.log(`      ${r.diff} | ${r.percentage}% | ${rate}${fc}${fs} | ${r.date}`);
+  }
+
+  if (addedRecords.length > displayCount) {
+    console.log(`\n  ... 还有 ${addedRecords.length - displayCount} 条新记录`);
+  }
+}
+
 // 主函数
 async function main() {
-  printDivider('舞萌DX 游玩记录获取测试 v2');
+  printDivider('舞萌DX 游玩记录获取测试 v3 (带去重)');
   console.log(`  测试时间: ${new Date().toLocaleString()}`);
   console.log(`  Node版本: ${process.version}`);
   printDivider();
@@ -460,8 +575,15 @@ async function main() {
     // 步骤1: 读取Token
     token = loadToken();
 
-    // 步骤2: 测试连接
+    // 步骤2: 加载数据库
     console.log('');
+    log('STEP', '步骤2: 加载历史数据库');
+    const db = loadDatabase();
+    log('INFO', `数据库状态: ${db.records.length} 条历史记录, ${db.totalFetches} 次获取`);
+
+    // 步骤3: 测试连接
+    console.log('');
+    log('STEP', '步骤3: 测试与舞萌服务器的连接');
     const connResult = await testConnection(token);
 
     if (!connResult.success) {
@@ -476,29 +598,49 @@ async function main() {
       latestToken = connResult.newToken;
     }
 
-    // 步骤3: 获取游玩记录
+    // 步骤4: 获取游玩记录
     console.log('');
+    log('STEP', '步骤4: 获取最近游玩记录');
     const { records, newToken } = await fetchPlayHistory(latestToken || token);
 
     if (newToken) {
       latestToken = newToken;
     }
 
-    // 显示结果
+    // 步骤5: 去重并添加到数据库
+    console.log('');
+    log('STEP', '步骤5: 去重并更新数据库');
+    const { addedRecords, duplicateCount } = addRecordsToDatabase(db, records);
+
+    log('INFO', `本次获取: ${records.length} 条`);
+    log('INFO', `新增记录: \x1b[32m${addedRecords.length}\x1b[0m 条`);
+    log('INFO', `重复记录: \x1b[33m${duplicateCount}\x1b[0m 条（已跳过）`);
+    log('INFO', `数据库总计: ${db.records.length} 条`);
+
+    // 显示本次获取的全部记录
     printRecords(records);
+
+    // 显示新增记录
+    printNewRecords(addedRecords);
+
+    // 显示统计
     printStats(records);
 
-    // 保存结果
+    // 保存数据库
     console.log('');
-    log('STEP', '步骤4: 保存测试结果');
+    log('STEP', '步骤6: 保存数据');
+    saveDatabase(db);
     saveTestResult(records, latestToken);
 
     // 完成
     printDivider('测试完成');
     log('SUCCESS', '所有测试通过！');
     console.log('\n  Token状态: \x1b[32m有效\x1b[0m');
-    console.log(`  获取记录: ${records.length} 条`);
-    console.log(`  数据已保存到 data/ 目录\n`);
+    console.log(`  本次获取: ${records.length} 条`);
+    console.log(`  新增记录: \x1b[32m${addedRecords.length}\x1b[0m 条`);
+    console.log(`  重复跳过: \x1b[33m${duplicateCount}\x1b[0m 条`);
+    console.log(`  数据库总计: \x1b[36m${db.records.length}\x1b[0m 条`);
+    console.log(`  数据文件: ${CONFIG.databaseFile}\n`);
 
   } catch (err) {
     printDivider('测试失败');
