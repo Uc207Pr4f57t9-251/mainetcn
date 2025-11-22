@@ -1,5 +1,5 @@
 /**
- * 舞萌DX 游玩历史记录获取测试脚本
+ * 舞萌DX 游玩历史记录获取测试脚本 v2
  *
  * 用于测试token是否有效，并获取最近游玩记录
  * 包含完整的测试过程输出
@@ -10,8 +10,6 @@
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
-const { DOMParser } = require('xmldom');
-const xpath = require('xpath');
 
 // 配置
 const CONFIG = {
@@ -129,16 +127,14 @@ async function testConnection(token) {
     });
 
     if (response.status === 200) {
-      // 检查是否被重定向到登录页
       const html = response.data;
-      if (html.includes('error') || html.includes('エラー') || html.includes('登录')) {
+      if (html.includes('error') || html.includes('エラー')) {
         log('WARN', '可能需要重新登录，响应内容包含错误信息');
         return { success: false, needReauth: true };
       }
 
       log('SUCCESS', '连接测试成功！Token有效');
 
-      // 提取新token
       let newToken = null;
       const setCookie = response.headers['set-cookie'];
       if (setCookie) {
@@ -170,109 +166,113 @@ async function testConnection(token) {
   }
 }
 
-// 解析游玩记录HTML
+// 使用正则表达式解析游玩记录HTML
 function parseRecordsHtml(html) {
   log('DEBUG', `解析HTML，长度: ${html.length} 字符`);
 
   const records = [];
 
-  try {
-    const doc = new DOMParser({
-      errorHandler: { warning: () => {}, error: () => {}, fatalError: () => {} }
-    }).parseFromString(html, 'text/html');
+  // 匹配每个游玩记录块 - 从 <div class="p_10 t_l f_0 v_b"> 开始
+  const recordBlockRegex = /<div class="p_10 t_l f_0 v_b">([\s\S]*?)(?=<div class="p_10 t_l f_0 v_b">|<div class="f_0">[\s\S]*?<\/footer>)/g;
 
-    // 查找所有记录块
-    const recordNodes = xpath.select("//div[contains(@class, 'p_10')]//div[contains(@class, 'see_through_block')]", doc);
+  let match;
+  while ((match = recordBlockRegex.exec(html)) !== null) {
+    const block = match[1];
 
-    log('DEBUG', `找到 ${recordNodes.length} 个记录块`);
+    try {
+      // 提取难度
+      const diffMatch = block.match(/diff_(\w+)\.png/);
+      const diffMap = { 'basic': 'Basic', 'advanced': 'Advanced', 'expert': 'Expert', 'master': 'Master', 'remaster': 'Re:Master' };
+      const diff = diffMatch ? (diffMap[diffMatch[1]] || diffMatch[1]) : 'Unknown';
 
-    for (const node of recordNodes) {
-      try {
-        // 提取曲目标题
-        const titleNode = xpath.select1(".//div[contains(@class, 'music_name_block')]", node);
-        const title = titleNode ? titleNode.textContent.trim() : '';
+      // 提取日期时间
+      const dateMatch = block.match(/<span class="v_b">(\d{4}\/\d{2}\/\d{2} \d{2}:\d{2})<\/span>/);
+      const date = dateMatch ? dateMatch[1] : '';
 
-        // 提取难度
-        const diffNode = xpath.select1(".//img[contains(@src, 'diff_')]/@src", node);
-        let diff = 'Unknown';
-        if (diffNode) {
-          const diffMatch = diffNode.value.match(/diff_(\w+)/);
-          if (diffMatch) {
-            const diffMap = { 'basic': 'Basic', 'advanced': 'Advanced', 'expert': 'Expert', 'master': 'Master', 'remaster': 'Re:Master' };
-            diff = diffMap[diffMatch[1]] || diffMatch[1];
-          }
-        }
-
-        // 提取达成率
-        const achieveNode = xpath.select1(".//div[contains(@class, 'playlog_achievement_txt')]", node);
-        let percentage = '';
-        if (achieveNode) {
-          const pctMatch = achieveNode.textContent.match(/([\d.]+)%/);
-          if (pctMatch) percentage = pctMatch[1];
-        }
-
-        // 提取评级
-        const rateNode = xpath.select1(".//img[contains(@src, 'music_icon_')]/@src", node);
-        let rate = '';
-        if (rateNode) {
-          const rateMatch = rateNode.value.match(/music_icon_(\w+)/);
-          if (rateMatch) rate = rateMatch[1].toUpperCase();
-        }
-
-        // 提取日期
-        const dateNode = xpath.select1(".//span[contains(@class, 'v_b')]", node);
-        const date = dateNode ? dateNode.textContent.trim() : '';
-
-        // 提取FC/FS
-        let fc = '', fs = '';
-        const fcNode = xpath.select1(".//img[contains(@src, 'fc_') and contains(@src, '.png')]/@src", node);
-        if (fcNode) {
-          const fcMatch = fcNode.value.match(/fc_(\w+)/);
-          if (fcMatch) fc = fcMatch[1].toUpperCase();
-        }
-        const fsNode = xpath.select1(".//img[contains(@src, 'fs_') or contains(@src, 'sync_')]/@src", node);
-        if (fsNode) {
-          const fsMatch = fsNode.value.match(/(fs_|sync_)(\w+)/);
-          if (fsMatch) fs = fsMatch[2].toUpperCase();
-        }
-
-        // 提取DX分数
-        const dxNode = xpath.select1(".//div[contains(@class, 'playlog_score_block')]", node);
-        let dxscore = '';
-        if (dxNode) {
-          const dxMatch = dxNode.textContent.match(/(\d+)/);
-          if (dxMatch) dxscore = dxMatch[1];
-        }
-
-        // 提取记录ID
-        let trackId = '';
-        const linkNode = xpath.select1(".//form/@action", node);
-        if (linkNode) {
-          const idMatch = linkNode.value.match(/idx=(\d+)/);
-          if (idMatch) trackId = idMatch[1];
-        }
-
-        if (title) {
-          records.push({
-            title,
-            diff,
-            percentage,
-            rate,
-            date,
-            fc: fc || null,
-            fs: fs || null,
-            dxscore,
-            trackId
-          });
-        }
-      } catch (e) {
-        log('DEBUG', `解析单条记录失败: ${e.message}`);
+      // 提取曲目名称 - 在 basic_block 中，clear.png 之后
+      const titleMatch = block.match(/clear\.png"[^>]*\/>([\s\S]*?)<\/div>/);
+      let title = '';
+      if (titleMatch) {
+        title = titleMatch[1].replace(/<[^>]+>/g, '').trim();
       }
+
+      // 提取达成率
+      const achieveMatch = block.match(/playlog_achievement_txt[^>]*>(\d+)<span[^>]*>\.([\d]+)%<\/span>/);
+      let percentage = '';
+      if (achieveMatch) {
+        percentage = `${achieveMatch[1]}.${achieveMatch[2]}`;
+      }
+
+      // 提取评级 (scorerank)
+      const rateMatch = block.match(/playlog\/(\w+)\.png[^>]*class="playlog_scorerank"/);
+      let rate = '';
+      if (rateMatch) {
+        const rateMap = {
+          'sssp': 'SSS+', 'sss': 'SSS', 'ssp': 'SS+', 'ss': 'SS',
+          'sp': 'S+', 's': 'S', 'aaa': 'AAA', 'aa': 'AA', 'a': 'A',
+          'bbb': 'BBB', 'bb': 'BB', 'b': 'B', 'c': 'C', 'd': 'D'
+        };
+        rate = rateMap[rateMatch[1].toLowerCase()] || rateMatch[1].toUpperCase();
+      }
+
+      // 提取DX分数
+      const dxMatch = block.match(/white p_r_5 f_15 f_r">([\d,]+)\s*\/\s*([\d,]+)<\/div>/);
+      let dxscore = '', dxmax = '';
+      if (dxMatch) {
+        dxscore = dxMatch[1].replace(/,/g, '');
+        dxmax = dxMatch[2].replace(/,/g, '');
+      }
+
+      // 提取FC状态 (排除dummy)
+      let fc = null;
+      const fcMatch = block.match(/playlog\/(fc_|ap)(\w*)\.png/);
+      if (fcMatch && !fcMatch[0].includes('dummy')) {
+        const fcType = fcMatch[1] + fcMatch[2];
+        const fcMap = { 'ap': 'AP', 'app': 'AP+', 'fc': 'FC', 'fcp': 'FC+' };
+        fc = fcMap[fcType.toLowerCase()] || fcType.toUpperCase();
+      }
+
+      // 提取FS状态 (排除dummy)
+      let fs = null;
+      const fsMatch = block.match(/playlog\/(sync_|fs|fsd)(\w*)\.png/);
+      if (fsMatch && !fsMatch[0].includes('dummy')) {
+        const fsType = fsMatch[1] + fsMatch[2];
+        const fsMap = { 'sync': 'SYNC', 'fs': 'FS', 'fsp': 'FS+', 'fsd': 'FDX', 'fsdp': 'FDX+' };
+        fs = fsMap[fsType.toLowerCase()] || fsType.toUpperCase();
+      }
+
+      // 提取记录ID
+      const idMatch = block.match(/name="idx" value="([^"]+)"/);
+      const trackId = idMatch ? idMatch[1] : '';
+
+      // 是否是DX谱面
+      const isDx = block.includes('music_dx.png');
+
+      // 是否New Record
+      const isNewRecord = block.includes('newrecord.png');
+
+      if (title) {
+        records.push({
+          title,
+          diff,
+          percentage,
+          rate,
+          date,
+          fc,
+          fs,
+          dxscore,
+          dxmax,
+          trackId,
+          isDx,
+          isNewRecord
+        });
+      }
+    } catch (e) {
+      log('DEBUG', `解析单条记录失败: ${e.message}`);
     }
-  } catch (err) {
-    log('ERROR', `HTML解析失败: ${err.message}`);
   }
 
+  log('DEBUG', `正则匹配完成，找到 ${records.length} 条记录`);
   return records;
 }
 
@@ -300,6 +300,14 @@ async function fetchPlayHistory(token) {
       throw new Error(`请求失败，状态码: ${response.status}`);
     }
 
+    // 保存原始HTML用于调试
+    const debugDir = path.join(__dirname, 'data');
+    if (!fs.existsSync(debugDir)) {
+      fs.mkdirSync(debugDir, { recursive: true });
+    }
+    fs.writeFileSync(path.join(debugDir, 'last_response.html'), response.data);
+    log('DEBUG', '原始HTML已保存到 data/last_response.html');
+
     // 解析记录
     const records = parseRecordsHtml(response.data);
     log('SUCCESS', `成功解析 ${records.length} 条游玩记录`);
@@ -316,7 +324,7 @@ async function fetchPlayHistory(token) {
       }
     }
 
-    return { records, newToken };
+    return { records, newToken, html: response.data };
   } catch (err) {
     log('ERROR', `获取记录失败: ${err.message}`);
     throw err;
@@ -329,6 +337,7 @@ function printRecords(records) {
 
   if (records.length === 0) {
     console.log('  没有找到游玩记录');
+    console.log('  提示: 请检查 data/last_response.html 文件确认返回内容');
     return;
   }
 
@@ -341,10 +350,12 @@ function printRecords(records) {
     const fc = r.fc ? ` [\x1b[33m${r.fc}\x1b[0m]` : '';
     const fs = r.fs ? ` [\x1b[36m${r.fs}\x1b[0m]` : '';
     const rate = r.rate ? `\x1b[32m${r.rate}\x1b[0m` : '-';
+    const newRec = r.isNewRecord ? ' \x1b[31mNEW!\x1b[0m' : '';
+    const dxTag = r.isDx ? '\x1b[35m[DX]\x1b[0m ' : '';
 
-    console.log(`  ${(i + 1).toString().padStart(2)}. ${r.title}`);
+    console.log(`  ${(i + 1).toString().padStart(2)}. ${dxTag}${r.title}${newRec}`);
     console.log(`      难度: ${r.diff} | 达成率: ${r.percentage}% | 评级: ${rate}${fc}${fs}`);
-    console.log(`      DX分数: ${r.dxscore || '-'} | 日期: ${r.date || '-'}`);
+    console.log(`      DX分数: ${r.dxscore || '-'}/${r.dxmax || '-'} | 日期: ${r.date || '-'}`);
     console.log('');
   }
 
@@ -357,32 +368,46 @@ function printRecords(records) {
 function printStats(records) {
   printSubDivider('统计信息');
 
+  if (records.length === 0) {
+    console.log('  无数据');
+    return;
+  }
+
   const stats = {
     total: records.length,
     difficulties: {},
     ratings: {},
     fcCount: 0,
-    fsCount: 0
+    fsCount: 0,
+    newRecords: 0,
+    dxCount: 0
   };
 
   for (const r of records) {
     stats.difficulties[r.diff] = (stats.difficulties[r.diff] || 0) + 1;
-    stats.ratings[r.rate] = (stats.ratings[r.rate] || 0) + 1;
+    if (r.rate) stats.ratings[r.rate] = (stats.ratings[r.rate] || 0) + 1;
     if (r.fc) stats.fcCount++;
     if (r.fs) stats.fsCount++;
+    if (r.isNewRecord) stats.newRecords++;
+    if (r.isDx) stats.dxCount++;
   }
 
   console.log(`  总记录数: ${stats.total}`);
+  console.log(`  DX谱面: ${stats.dxCount}`);
+  console.log(`  新纪录: ${stats.newRecords}`);
   console.log(`  FC数量: ${stats.fcCount}`);
   console.log(`  FS数量: ${stats.fsCount}`);
 
   console.log('\n  难度分布:');
-  for (const [diff, count] of Object.entries(stats.difficulties)) {
-    console.log(`    ${diff}: ${count}`);
+  const diffOrder = ['Basic', 'Advanced', 'Expert', 'Master', 'Re:Master'];
+  for (const diff of diffOrder) {
+    if (stats.difficulties[diff]) {
+      console.log(`    ${diff}: ${stats.difficulties[diff]}`);
+    }
   }
 
   console.log('\n  评级分布:');
-  const ratingOrder = ['SSS+', 'SSS', 'SS+', 'SS', 'S+', 'S', 'AAA', 'AA', 'A'];
+  const ratingOrder = ['SSS+', 'SSS', 'SS+', 'SS', 'S+', 'S', 'AAA', 'AA', 'A', 'BBB', 'BB', 'B', 'C', 'D'];
   for (const rate of ratingOrder) {
     if (stats.ratings[rate]) {
       console.log(`    ${rate}: ${stats.ratings[rate]}`);
@@ -423,7 +448,7 @@ function saveTestResult(records, token) {
 
 // 主函数
 async function main() {
-  printDivider('舞萌DX 游玩记录获取测试');
+  printDivider('舞萌DX 游玩记录获取测试 v2');
   console.log(`  测试时间: ${new Date().toLocaleString()}`);
   console.log(`  Node版本: ${process.version}`);
   printDivider();
