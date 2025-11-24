@@ -17,7 +17,9 @@ const CONFIG = {
   dataDir: path.join(__dirname, 'data'),
   databaseFile: path.join(__dirname, 'data', 'play_history_db.json'),
   baseUrl: 'https://maimai.wahlap.com/maimai-mobile',
-  userAgent: 'Mozilla/5.0 (Linux; Android 15; PJZ110 Build/AP3A.240617.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 XWEB/1160117 MMWEBSDK/20250201 MMWEBID/2253 MicroMessenger/8.0.57.2800(0x28003940) WeChat/arm64 Weixin GPVersion/1 NetType/4G Language/zh_CN ABI/arm64'
+  userAgent: 'Mozilla/5.0 (Linux; Android 15; PJZ110 Build/AP3A.240617.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 XWEB/1160117 MMWEBSDK/20250201 MMWEBID/2253 MicroMessenger/8.0.57.2800(0x28003940) WeChat/arm64 Weixin GPVersion/1 NetType/4G Language/zh_CN ABI/arm64',
+  // Debug模式：显示详细的网络请求信息
+  debugMode: true
 };
 
 // 日志函数
@@ -58,6 +60,96 @@ function printSubDivider(title = '') {
   } else {
     console.log(line);
   }
+}
+
+// 详细的HTTP请求日志
+function logHttpRequest(method, url, headers, body = null) {
+  if (!CONFIG.debugMode) return;
+
+  console.log('\n' + '┌' + '─'.repeat(58) + '┐');
+  console.log('│ \x1b[36mHTTP REQUEST\x1b[0m' + ' '.repeat(45) + '│');
+  console.log('├' + '─'.repeat(58) + '┤');
+  console.log(`│ \x1b[33mMethod:\x1b[0m ${method.padEnd(50)} │`);
+  console.log(`│ \x1b[33mURL:\x1b[0m ${url.substring(0, 53).padEnd(53)} │`);
+  if (url.length > 53) {
+    console.log(`│      ${url.substring(53).padEnd(53)} │`);
+  }
+  console.log('├' + '─'.repeat(58) + '┤');
+  console.log('│ \x1b[33mHeaders:\x1b[0m' + ' '.repeat(48) + '│');
+  for (const [key, value] of Object.entries(headers)) {
+    const headerStr = `  ${key}: ${value}`;
+    if (headerStr.length <= 56) {
+      console.log(`│ ${headerStr.padEnd(57)} │`);
+    } else {
+      // 分行显示长header
+      const parts = [];
+      let current = `  ${key}: `;
+      const valueStr = String(value);
+      for (let i = 0; i < valueStr.length; i++) {
+        if (current.length >= 56) {
+          parts.push(current);
+          current = '    ';
+        }
+        current += valueStr[i];
+      }
+      if (current.trim()) parts.push(current);
+      parts.forEach(part => console.log(`│ ${part.padEnd(57)} │`));
+    }
+  }
+  if (body) {
+    console.log('├' + '─'.repeat(58) + '┤');
+    console.log('│ \x1b[33mBody:\x1b[0m' + ' '.repeat(51) + '│');
+    console.log(`│ ${String(body).substring(0, 56).padEnd(57)} │`);
+  }
+  console.log('└' + '─'.repeat(58) + '┘\n');
+}
+
+// 详细的HTTP响应日志
+function logHttpResponse(statusCode, statusText, headers, bodyLength, duration) {
+  if (!CONFIG.debugMode) return;
+
+  const statusColor = statusCode >= 200 && statusCode < 300 ? '\x1b[32m' :
+                      statusCode >= 300 && statusCode < 400 ? '\x1b[33m' : '\x1b[31m';
+
+  console.log('\n' + '┌' + '─'.repeat(58) + '┐');
+  console.log('│ \x1b[36mHTTP RESPONSE\x1b[0m' + ' '.repeat(44) + '│');
+  console.log('├' + '─'.repeat(58) + '┤');
+  console.log(`│ \x1b[33mStatus:\x1b[0m ${statusColor}${statusCode} ${statusText}\x1b[0m`.padEnd(67 + statusColor.length + 4) + '│');
+  console.log(`│ \x1b[33mDuration:\x1b[0m ${duration}ms`.padEnd(67) + '│');
+  console.log(`│ \x1b[33mBody Length:\x1b[0m ${bodyLength} bytes`.padEnd(67) + '│');
+  console.log('├' + '─'.repeat(58) + '┤');
+  console.log('│ \x1b[33mHeaders:\x1b[0m' + ' '.repeat(48) + '│');
+
+  for (const [key, value] of Object.entries(headers)) {
+    let displayValue = String(value);
+    // 对于Set-Cookie，显示简化信息
+    if (key.toLowerCase() === 'set-cookie') {
+      if (Array.isArray(value)) {
+        displayValue = `[${value.length} cookies]`;
+        console.log(`│   ${key}: ${displayValue}`.padEnd(58) + '│');
+        value.forEach((cookie, i) => {
+          const cookieMatch = cookie.match(/^([^=]+)=([^;]+)/);
+          if (cookieMatch) {
+            const cookieName = cookieMatch[1];
+            const cookieValue = cookieMatch[2];
+            const shortValue = cookieValue.length > 30 ?
+              cookieValue.substring(0, 30) + '...' : cookieValue;
+            console.log(`│     [${i}] ${cookieName}=${shortValue}`.padEnd(58) + '│');
+          }
+        });
+        continue;
+      }
+    }
+
+    const headerStr = `  ${key}: ${displayValue}`;
+    if (headerStr.length <= 56) {
+      console.log(`│ ${headerStr.padEnd(57)} │`);
+    } else {
+      console.log(`│ ${headerStr.substring(0, 56).padEnd(57)} │`);
+      console.log(`│    ${headerStr.substring(56).padEnd(54)} │`);
+    }
+  }
+  console.log('└' + '─'.repeat(58) + '┘\n');
 }
 
 // 确保数据目录存在
@@ -193,24 +285,34 @@ async function testConnection(token) {
   // 注意：步骤号由调用方日志输出
 
   const url = `${CONFIG.baseUrl}/home/`;
+  const headers = buildHeaders(token);
+
   log('DEBUG', `请求URL: ${url}`);
+
+  // 记录请求详情
+  logHttpRequest('GET', url, headers);
 
   try {
     const startTime = Date.now();
     const response = await axios.get(url, {
-      headers: buildHeaders(token),
+      headers: headers,
       timeout: 30000,
       maxRedirects: 5,
       validateStatus: () => true
     });
     const duration = Date.now() - startTime;
 
+    // 记录响应详情
+    logHttpResponse(
+      response.status,
+      response.statusText,
+      response.headers,
+      response.data.length,
+      duration
+    );
+
     log('INFO', `响应状态: ${response.status} ${response.statusText}`);
     log('INFO', `响应时间: ${duration}ms`);
-    log('DEBUG', `响应头:`, {
-      'content-type': response.headers['content-type'],
-      'set-cookie': response.headers['set-cookie'] ? '已返回' : '无'
-    });
 
     if (response.status === 200) {
       const html = response.data;
@@ -242,11 +344,33 @@ async function testConnection(token) {
       return { success: false };
     }
   } catch (err) {
+    console.log('\n' + '┌' + '─'.repeat(58) + '┐');
+    console.log('│ \x1b[31mHTTP ERROR\x1b[0m' + ' '.repeat(46) + '│');
+    console.log('├' + '─'.repeat(58) + '┤');
+    console.log(`│ \x1b[33mError Message:\x1b[0m ${String(err.message).substring(0, 40).padEnd(40)} │`);
+    console.log(`│ \x1b[33mError Code:\x1b[0m ${String(err.code || 'N/A').padEnd(43)} │`);
+
+    if (err.response) {
+      console.log('├' + '─'.repeat(58) + '┤');
+      console.log('│ \x1b[33mResponse Status:\x1b[0m'.padEnd(58) + '│');
+      console.log(`│   ${err.response.status} ${err.response.statusText}`.padEnd(58) + '│');
+      console.log(`│ \x1b[33mResponse Headers:\x1b[0m`.padEnd(58) + '│');
+      for (const [key, value] of Object.entries(err.response.headers || {})) {
+        console.log(`│   ${key}: ${String(value).substring(0, 48)}`.padEnd(58) + '│');
+      }
+    }
+
+    console.log('└' + '─'.repeat(58) + '┘\n');
+
     log('ERROR', `连接失败: ${err.message}`);
     if (err.code === 'ENOTFOUND') {
       log('ERROR', '无法解析域名，请检查网络连接');
     } else if (err.code === 'ETIMEDOUT') {
       log('ERROR', '连接超时，请检查网络或使用VPN');
+    } else if (err.code === 'ECONNREFUSED') {
+      log('ERROR', '连接被拒绝');
+    } else if (err.code === 'ECONNRESET') {
+      log('ERROR', '连接被重置');
     }
     throw err;
   }
@@ -364,19 +488,31 @@ function parseRecordsHtml(html) {
 
 // 获取游玩记录
 async function fetchPlayHistory(token) {
-  log('STEP', '步骤3: 获取最近游玩记录');
-
   const url = `${CONFIG.baseUrl}/record/`;
+  const headers = buildHeaders(token);
+
   log('DEBUG', `请求URL: ${url}`);
+
+  // 记录请求详情
+  logHttpRequest('GET', url, headers);
 
   try {
     const startTime = Date.now();
     const response = await axios.get(url, {
-      headers: buildHeaders(token),
+      headers: headers,
       timeout: 30000,
       validateStatus: () => true
     });
     const duration = Date.now() - startTime;
+
+    // 记录响应详情
+    logHttpResponse(
+      response.status,
+      response.statusText,
+      response.headers,
+      response.data.length,
+      duration
+    );
 
     log('INFO', `响应状态: ${response.status}`);
     log('INFO', `响应时间: ${duration}ms`);
@@ -387,12 +523,11 @@ async function fetchPlayHistory(token) {
     }
 
     // 保存原始HTML用于调试
-    const debugDir = path.join(__dirname, 'data');
-    if (!fs.existsSync(debugDir)) {
-      fs.mkdirSync(debugDir, { recursive: true });
-    }
-    fs.writeFileSync(path.join(debugDir, 'last_response.html'), response.data);
-    log('DEBUG', '原始HTML已保存到 data/last_response.html');
+    ensureDataDir();
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+    const debugFile = path.join(CONFIG.dataDir, `response_${timestamp}.html`);
+    fs.writeFileSync(debugFile, response.data);
+    log('DEBUG', `原始HTML已保存到: ${debugFile}`);
 
     // 解析记录
     const records = parseRecordsHtml(response.data);
@@ -412,6 +547,25 @@ async function fetchPlayHistory(token) {
 
     return { records, newToken, html: response.data };
   } catch (err) {
+    console.log('\n' + '┌' + '─'.repeat(58) + '┐');
+    console.log('│ \x1b[31mHTTP ERROR (获取游玩记录)\x1b[0m' + ' '.repeat(28) + '│');
+    console.log('├' + '─'.repeat(58) + '┤');
+    console.log(`│ \x1b[33mError Message:\x1b[0m ${String(err.message).substring(0, 40).padEnd(40)} │`);
+    console.log(`│ \x1b[33mError Code:\x1b[0m ${String(err.code || 'N/A').padEnd(43)} │`);
+
+    if (err.response) {
+      console.log('├' + '─'.repeat(58) + '┤');
+      console.log('│ \x1b[33mResponse Status:\x1b[0m'.padEnd(58) + '│');
+      console.log(`│   ${err.response.status} ${err.response.statusText}`.padEnd(58) + '│');
+      if (err.response.data) {
+        const preview = String(err.response.data).substring(0, 200);
+        console.log(`│ \x1b[33mResponse Preview:\x1b[0m`.padEnd(58) + '│');
+        console.log(`│   ${preview.substring(0, 54)}`.padEnd(58) + '│');
+      }
+    }
+
+    console.log('└' + '─'.repeat(58) + '┘\n');
+
     log('ERROR', `获取记录失败: ${err.message}`);
     throw err;
   }
