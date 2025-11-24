@@ -160,6 +160,41 @@ function ensureDataDir() {
   }
 }
 
+// 保存失败的响应数据用于分析
+function saveFailedResponse(url, headers, response, reason = 'unknown') {
+  ensureDataDir();
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+  const baseFilename = path.join(CONFIG.dataDir, `failed_${reason}_${timestamp}`);
+
+  // 保存响应HTML
+  const htmlFile = `${baseFilename}.html`;
+  fs.writeFileSync(htmlFile, response.data);
+  log('WARN', `失败响应HTML已保存: ${htmlFile}`);
+
+  // 保存完整的请求和响应信息
+  const infoFile = `${baseFilename}_info.json`;
+  const info = {
+    timestamp: new Date().toISOString(),
+    reason: reason,
+    request: {
+      url: url,
+      method: 'GET',
+      headers: headers
+    },
+    response: {
+      status: response.status,
+      statusText: response.statusText,
+      headers: response.headers,
+      dataLength: response.data.length,
+      dataPreview: response.data.substring(0, 500) // 前500字符预览
+    }
+  };
+  fs.writeFileSync(infoFile, JSON.stringify(info, null, 2));
+  log('WARN', `失败响应详情已保存: ${infoFile}`);
+
+  return { htmlFile, infoFile };
+}
+
 // 生成记录唯一ID
 // 使用 trackId 作为主要标识，如果没有则使用组合键
 function generateRecordId(record) {
@@ -331,7 +366,12 @@ async function testConnection(token) {
       const html = response.data;
       if (html.includes('error') || html.includes('エラー')) {
         log('WARN', '可能需要重新登录，响应内容包含错误信息');
-        return { success: false, needReauth: true };
+
+        // 保存失败的响应用于分析
+        const savedFiles = saveFailedResponse(url, headers, response, 'auth_error');
+        log('INFO', '提示：请检查保存的HTML文件来确认具体错误信息');
+
+        return { success: false, needReauth: true, savedFiles };
       }
 
       log('SUCCESS', '连接测试成功！Token有效');
@@ -351,10 +391,18 @@ async function testConnection(token) {
       return { success: true, newToken };
     } else if (response.status === 302 || response.status === 301) {
       log('WARN', `被重定向到: ${response.headers['location']}`);
-      return { success: false, redirect: response.headers['location'] };
+
+      // 保存重定向响应
+      const savedFiles = saveFailedResponse(url, headers, response, 'redirect');
+
+      return { success: false, redirect: response.headers['location'], savedFiles };
     } else {
       log('ERROR', `意外的响应状态: ${response.status}`);
-      return { success: false };
+
+      // 保存异常状态码的响应
+      const savedFiles = saveFailedResponse(url, headers, response, `status_${response.status}`);
+
+      return { success: false, savedFiles };
     }
   } catch (err) {
     console.log('\n' + '┌' + '─'.repeat(58) + '┐');
@@ -371,6 +419,9 @@ async function testConnection(token) {
       for (const [key, value] of Object.entries(err.response.headers || {})) {
         console.log(`│   ${key}: ${String(value).substring(0, 48)}`.padEnd(58) + '│');
       }
+
+      // 保存错误响应
+      saveFailedResponse(url, headers, err.response, `exception_${err.code || 'unknown'}`);
     }
 
     console.log('└' + '─'.repeat(58) + '┘\n');
@@ -535,6 +586,8 @@ async function fetchPlayHistory(token) {
     log('DEBUG', `响应大小: ${response.data.length} 字符`);
 
     if (response.status !== 200) {
+      // 保存非200状态码的响应
+      saveFailedResponse(url, headers, response, `fetch_status_${response.status}`);
       throw new Error(`请求失败，状态码: ${response.status}`);
     }
 
@@ -548,6 +601,19 @@ async function fetchPlayHistory(token) {
     // 解析记录
     const records = parseRecordsHtml(response.data);
     log('SUCCESS', `成功解析 ${records.length} 条游玩记录`);
+
+    // 如果解析出0条记录，或响应包含错误信息，额外保存为失败响应
+    const html = response.data;
+    if (records.length === 0 || html.includes('error') || html.includes('エラー')) {
+      if (records.length === 0) {
+        log('WARN', '警告：未解析出任何游玩记录');
+      }
+      if (html.includes('error') || html.includes('エラー')) {
+        log('WARN', '警告：响应内容包含错误信息');
+      }
+      // 保存为失败响应以便分析
+      saveFailedResponse(url, headers, response, 'parse_issue_or_error');
+    }
 
     // 提取新token
     let newToken = null;
@@ -578,6 +644,9 @@ async function fetchPlayHistory(token) {
         console.log(`│ \x1b[33mResponse Preview:\x1b[0m`.padEnd(58) + '│');
         console.log(`│   ${preview.substring(0, 54)}`.padEnd(58) + '│');
       }
+
+      // 保存错误响应
+      saveFailedResponse(url, headers, err.response, `fetch_exception_${err.code || 'unknown'}`);
     }
 
     console.log('└' + '─'.repeat(58) + '┘\n');
