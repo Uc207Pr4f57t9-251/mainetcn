@@ -111,7 +111,7 @@ latest_token.json
 output/
 
 # Data directory (play history, etc.)
-data/
+#data/
 
 # Export directory
 exports/
