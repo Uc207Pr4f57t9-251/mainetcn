@@ -476,6 +476,12 @@ function parseRecordsHtml(html) {
       let title = '';
       if (titleMatch) {
         title = titleMatch[1].replace(/<[^>]+>/g, '').trim();
+        // 解码HTML实体
+        title = title.replace(/&#039;/g, "'")
+                    .replace(/&quot;/g, '"')
+                    .replace(/&amp;/g, '&')
+                    .replace(/&lt;/g, '<')
+                    .replace(/&gt;/g, '>');
       }
 
       // 提取达成率
