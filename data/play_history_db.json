@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "createdAt": "2025-11-24T19:04:05.141Z",
-  "lastUpdated": "2025-11-24T19:04:15.689Z",
+  "createdAt": "2025-11-24T19:07:12.990822",
+  "lastUpdated": "2025-11-24T19:07:21.860612",
   "totalFetches": 2,
   "records": [
     {
@@ -18,7 +18,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_3,1763905252",
-      "_fetchedAt": "2025-11-24T19:04:05.145Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998052"
     },
     {
       "title": "World's end loneliness",
@@ -34,7 +34,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_2,1763905059",
-      "_fetchedAt": "2025-11-24T19:04:05.145Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998063"
     },
     {
       "title": "Excalibur ～Revived resolution～",
@@ -50,7 +50,7 @@
       "isDx": false,
       "isNewRecord": false,
       "_id": "track_1,1763904887",
-      "_fetchedAt": "2025-11-24T19:04:05.145Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998066"
     },
     {
       "title": "Party☆People☆Princess",
@@ -66,7 +66,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_0,1763903091",
-      "_fetchedAt": "2025-11-24T19:04:05.145Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998067"
     },
     {
       "title": "Glorious Crown",
@@ -82,7 +82,7 @@
       "isDx": false,
       "isNewRecord": false,
       "_id": "track_49,1763902881",
-      "_fetchedAt": "2025-11-24T19:04:05.145Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998069"
     },
     {
       "title": "Cider P@rty",
@@ -98,7 +98,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_48,1763902688",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998070"
     },
     {
       "title": "Heavenly Blast",
@@ -114,7 +114,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_47,1763902481",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998072"
     },
     {
       "title": "熱異常",
@@ -130,7 +130,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_46,1763901798",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998081"
     },
     {
       "title": "吉原ラメント",
@@ -146,7 +146,7 @@
       "isDx": false,
       "isNewRecord": true,
       "_id": "track_45,1763901534",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998083"
     },
     {
       "title": "ツムギボシ",
@@ -162,7 +162,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_44,1763901303",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998084"
     },
     {
       "title": "ラビットホール",
@@ -178,7 +178,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_43,1763901034",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998086"
     },
     {
       "title": "LAMIA",
@@ -194,7 +194,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_42,1763894121",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998088"
     },
     {
       "title": "Fragrance",
@@ -210,7 +210,7 @@
       "isDx": false,
       "isNewRecord": true,
       "_id": "track_41,1763893951",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998096"
     },
     {
       "title": "Cider P@rty",
@@ -226,7 +226,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_40,1763893742",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998098"
     },
     {
       "title": "患部で止まってすぐ溶ける～狂気の優曇華院",
@@ -242,7 +242,7 @@
       "isDx": false,
       "isNewRecord": false,
       "_id": "track_39,1763893533",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998099"
     },
     {
       "title": "raputa",
@@ -258,7 +258,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_38,1763892039",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998100"
     },
     {
       "title": "sølips",
@@ -274,7 +274,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_37,1763891850",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998104"
     },
     {
       "title": "熱異常",
@@ -290,7 +290,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_36,1763891636",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998105"
     },
     {
       "title": "Oshama Scramble!",
@@ -306,7 +306,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_35,1763891461",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998107"
     },
     {
       "title": "TRUST",
@@ -322,7 +322,7 @@
       "isDx": false,
       "isNewRecord": false,
       "_id": "track_34,1763890181",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998109"
     },
     {
       "title": "SQUAD-Phvntom-",
@@ -338,7 +338,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_33,1763890002",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998110"
     },
     {
       "title": "とびだせ！TO THE COSMIC!!",
@@ -354,7 +354,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_32,1763889768",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998112"
     },
     {
       "title": "Comet Panto Men!",
@@ -370,7 +370,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_31,1763889573",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998113"
     },
     {
       "title": "躯樹の墓守",
@@ -386,7 +386,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_30,1763887873",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998115"
     },
     {
       "title": "偉大なる悪魔は実は大天使パトラちゃん様なのだ！",
@@ -402,7 +402,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_29,1763887633",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998116"
     },
     {
       "title": "JUMPIN' JUMPIN'",
@@ -418,7 +418,7 @@
       "isDx": false,
       "isNewRecord": true,
       "_id": "track_28,1763887447",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998117"
     },
     {
       "title": "Cider P@rty",
@@ -434,7 +434,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_27,1763887183",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998119"
     },
     {
       "title": "ツムギボシ",
@@ -450,7 +450,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_26,1763884722",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998122"
     },
     {
       "title": "folern",
@@ -466,7 +466,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_25,1763884514",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998123"
     },
     {
       "title": "エンドマークに希望と涙を添えて",
@@ -482,7 +482,7 @@
       "isDx": false,
       "isNewRecord": false,
       "_id": "track_24,1763884332",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998125"
     },
     {
       "title": "Churros Parlor",
@@ -498,7 +498,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_23,1763884140",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998126"
     },
     {
       "title": "とびだせ！TO THE COSMIC!!",
@@ -514,7 +514,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_22,1763874633",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998127"
     },
     {
       "title": "Titania",
@@ -530,7 +530,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_21,1763874448",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998129"
     },
     {
       "title": "Valsqotch",
@@ -546,7 +546,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_20,1763874246",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998132"
     },
     {
       "title": "雷切-RAIKIRI-",
@@ -562,7 +562,7 @@
       "isDx": false,
       "isNewRecord": true,
       "_id": "track_19,1763874039",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998133"
     },
     {
       "title": "星空パーティーチューン",
@@ -578,7 +578,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_18,1763555978",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998135"
     },
     {
       "title": "Rainbow Rush Story",
@@ -594,7 +594,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_17,1763555780",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998136"
     },
     {
       "title": "raputa",
@@ -610,7 +610,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_16,1763555575",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998231"
     },
     {
       "title": "ウミユリ海底譚",
@@ -626,7 +626,7 @@
       "isDx": false,
       "isNewRecord": false,
       "_id": "track_15,1763555137",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998246"
     },
     {
       "title": "熱異常",
@@ -642,7 +642,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_14,1763554869",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998249"
     },
     {
       "title": "星空パーティーチューン",
@@ -658,7 +658,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_13,1763554687",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998252"
     },
     {
       "title": "とびだせ！TO THE COSMIC!!",
@@ -674,7 +674,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_12,1763554380",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998258"
     },
     {
       "title": "バカ通信",
@@ -690,7 +690,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_11,1763554188",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998260"
     },
     {
       "title": "時計の国のジェミニ",
@@ -706,7 +706,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_10,1763553979",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998265"
     },
     {
       "title": "Cider P@rty",
@@ -722,7 +722,7 @@
       "isDx": true,
       "isNewRecord": false,
       "_id": "track_9,1763553018",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998267"
     },
     {
       "title": "Ai C",
@@ -738,7 +738,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_8,1763552823",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998269"
     },
     {
       "title": "ピュグマリオンの咒文",
@@ -754,7 +754,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_7,1763552632",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998271"
     },
     {
       "title": "ねぇ、壊れタ人形ハ何処へ棄テらレるノ？",
@@ -770,7 +770,7 @@
       "isDx": false,
       "isNewRecord": true,
       "_id": "track_6,1763552411",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998275"
     },
     {
       "title": "テオ",
@@ -786,7 +786,7 @@
       "isDx": true,
       "isNewRecord": true,
       "_id": "track_5,1763551265",
-      "_fetchedAt": "2025-11-24T19:04:05.146Z"
+      "_fetchedAt": "2025-11-24T19:07:12.998277"
     }
   ],
   "recordIndex": {
