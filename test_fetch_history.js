@@ -10,6 +10,13 @@
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
+const https = require('https');
+
+// 创建一个自定义的HTTPS代理，用于解决SSL握手问题
+const httpsAgent = new https.Agent({
+  rejectUnauthorized: false, // 忽略证书验证（仅用于调试）
+  secureProtocol: 'TLSv1_2_method' // 使用TLS 1.2协议
+});
 
 // 配置
 const CONFIG = {
@@ -344,6 +351,7 @@ async function testConnection(token) {
     const startTime = Date.now();
     const response = await axios.get(url, {
       headers: headers,
+      httpsAgent: httpsAgent,
       timeout: 30000,
       maxRedirects: 5,
       validateStatus: () => true
@@ -567,6 +575,7 @@ async function fetchPlayHistory(token) {
     const startTime = Date.now();
     const response = await axios.get(url, {
       headers: headers,
+      httpsAgent: httpsAgent,
       timeout: 30000,
       validateStatus: () => true
     });
