@@ -1,0 +1,26 @@
+{
+  "app": "com.tencent.mm",
+  "code": 200,
+  "duration": "226ms",
+  "headers": {
+    "Server": "nginx",
+    "Date": "Mon, 24 Nov 2025 18:02:06 GMT",
+    "Content-Type": "text/html; charset\u003dUTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Set-Cookie": "_t\u003d31e1769d740ae3b07e44e7c0e7971d2c; expires\u003dThu, 22-Nov-2035 18:02:06 GMT; Max-Age\u003d315360000; path\u003d/",
+    "Expires": "-1",
+    "Cache-Control": "no-cache",
+    "Pragma": "",
+    "X-XSS-Protection": "1; mode\u003dblock",
+    "Strict-Transport-Security": "max-age\u003d31536000; includeSubDomains",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Content-Type-Options": "nosniff"
+  },
+  "message": "OK",
+  "protocol": "HTTP/1.1",
+  "remoteIp": "152.136.211.165",
+  "remotePort": 443,
+  "sessionId": "6b5372e9-8e2f-41ea-bee8-bcbaad60d2e7",
+  "time": "2025-11-25 02:02:06"
+}

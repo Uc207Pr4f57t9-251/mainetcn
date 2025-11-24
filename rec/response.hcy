@@ -1,0 +1,2327 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 24 Nov 2025 18:02:06 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: _t=31e1769d740ae3b07e44e7c0e7971d2c; expires=Thu, 22-Nov-2035 18:02:06 GMT; Max-Age=315360000; path=/
+Expires: -1
+Cache-Control: 
+Pragma: 
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Cache-Control: no-cache
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+7e44
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+	<script>
+		var baseW = 768;
+		var iOSW = 0;
+		var ua = navigator.userAgent.toLowerCase();
+		var isiOS = (ua.indexOf("iphone") > -1) || (ua.indexOf("ipod") > -1) || (ua.indexOf("ipad") > -1);
+		if(isiOS){
+			iOSW = document.documentElement.clientWidth;
+		}
+		window.addEventListener("resize", updateMetaViewport, false);
+		window.addEventListener("orientationchange", updateMetaViewport, false);
+		var ev = document.createEvent("UIEvent");
+		ev.initEvent("resize", true, true)
+		window.dispatchEvent(ev);
+		function updateMetaViewport(){
+			var viewportContent;
+			var w = window.outerWidth;
+			if(isiOS){
+				w = iOSW;
+			}
+			if(w < baseW){
+				viewportContent = "width=480,initial-scale=" + w/480 + ",user-scalable=yes,shrink-to-fit=no";
+			}else{
+				viewportContent = "width=device-width,initial-scale=1.0,user-scalable=yes,shrink-to-fit=no";
+			}
+			document.querySelector("meta[name='viewport']").setAttribute("content", viewportContent);
+		}
+	</script>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8; IE=EmulateIE9" />
+	<meta http-equiv="Pragma" CONTENT="no-cache">
+	<meta http-equiv="Cache-Control" CONTENT="no-cache">
+	<meta http-equiv="Expires" CONTENT="-1">
+	<meta name="robots" content="INDEX, FOLLOW" />
+	<meta name="author" content="(C) SEGA">
+	<meta name="copyright" content="&copy;SEGA">
+	<meta name="description" content="此网页可浏览SEGA(世嘉)音乐机台「舞萌DX」的个人游戏记录。">
+	<meta name="keywords" content="舞萌DX,maimai DX,maimai deluxe,sega" />
+	<meta name="theme-color" content="#51bcf3">
+	<meta name="mkd" content="">
+
+	<title>舞萌DX－浏览游戏数据－</title>
+	<link rel="stylesheet" href="https://maimai.wahlap.com/maimai-mobile/css/modaal.min.css" />
+	<link rel="stylesheet" href="https://maimai.wahlap.com/maimai-mobile/css/common.css?ver=1.50?20250117" />
+	<link rel="stylesheet" href="https://maimai.wahlap.com/maimai-mobile/css/unique.css?ver=1.50?20250117" />
+	<link rel="apple-touch-icon-precomposed" href="https://maimai.wahlap.com/maimai-mobile/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="https://maimai.wahlap.com/maimai-mobile/apple-touch-icon.png">
+<!--
+ここに百度統計のスクリプト追加予定
+-->
+</head>
+<body oncontextmenu="return false;">
+	<div class="wrapper t_c">
+					<div class="spmenu_toggle"></div>
+			<nav class="spmenu_navigation" style="display:none">
+				<img src="https://maimai.wahlap.com/maimai-mobile/img/menu_title.png" class="w_320 m_t_20"/>
+				<div class="container p_10 f_0">
+					<div class="p_5">
+						<div class="d_ib col2"><a href="https://maimai.wahlap.com/maimai-mobile/home/"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_home.png" class="w_112"/></a></div>
+						<div class="d_ib col2"><a href="https://maimai.wahlap.com/maimai-mobile/playerData/"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_playerdata.png" class="w_112"/></a></div>
+					</div>
+					<div class="p_5">
+						<div class="d_ib col2"><a href="https://maimai.wahlap.com/maimai-mobile/friend/"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_friend.png" class="w_112"/></a></div>
+						<div class="d_ib col2"><a href="https://maimai.wahlap.com/maimai-mobile/shop/"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_shop.png" class="w_112"/></a></div>
+					</div>
+					<div class="p_5">
+						<div class="d_ib col2"><a href="https://maimai.wahlap.com/maimai-mobile/record/"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_record.png" class="w_112"/></a></div>
+						<div class="d_ib col2"><a href="https://maimai.wahlap.com/maimai-mobile/map/"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_map.png?ver=1.50" class="w_112"/></a></div>
+					</div>
+					<div class="p_5 p_b_10">
+						<div class="d_ib col2"><a href="https://maimai.wahlap.com/maimai-mobile/collection/"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_collection.png" class="w_112"/></a></div>
+<!--
+-->
+					</div>
+				</div>
+			</nav>
+				<a href="https://maimai.wahlap.com/maimai-mobile/home/"><img src="https://maimai.wahlap.com/maimai-mobile/img/logo.png" class="logo p_5"/></a>
+					<a href="https://maimai.wahlap.com/maimai-mobile/home/userOption/" class="setting"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_setting.png" /></a>
+			</div>
+	<div class="wrapper main_wrapper t_c">
+		<header class="f_0">
+				<div class="f_0">
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480 10" preserveAspectRatio="none" style="height:10px">
+		<path d="M0,10 v-5 q5,5 10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 v5 Z" fill="#7ed3ff"></path>
+	</svg>
+	<div class="menu">
+		<a href="https://maimai.wahlap.com/maimai-mobile/home/" class="d_ib col4 p_4"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_home.png?ver=1.50" class="w_112"/></a>
+		<a href="https://maimai.wahlap.com/maimai-mobile/playerData/" class="d_ib col4 p_4"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_playerdata.png?ver=1.50" class="w_112"/></a>
+		<a href="https://maimai.wahlap.com/maimai-mobile/friend/" class="d_ib col4 p_4"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_friend.png?ver=1.50" class="w_112"/></a>
+		<a href="https://maimai.wahlap.com/maimai-mobile/shop/" class="d_ib col4 p_4"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_shop.png?ver=1.50" class="w_112"/></a>
+	</div>
+	<div class="menu">
+		<a href="https://maimai.wahlap.com/maimai-mobile/record/" class="d_ib col4 p_4"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_record_on.png?ver=1.50" class="w_112"/></a>
+		<a href="https://maimai.wahlap.com/maimai-mobile/map/" class="d_ib col4 p_4"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_map.png?ver=1.50" class="w_112"/></a>
+		<a href="https://maimai.wahlap.com/maimai-mobile/collection/" class="d_ib col4 p_4"><img src="https://maimai.wahlap.com/maimai-mobile/img/menu_collection.png?ver=1.50" class="w_112"/></a>
+	</div>
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480 10" preserveAspectRatio="none" style="height:10px">
+		<path d="M0,0 v5 q5,5 10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 v-5 Z" fill="#7ed3ff"></path>
+	</svg>
+</div>
+		</header>
+
+					<div class="m_t_5 m_b_10 t_l f_0">
+	<a href="https://maimai.wahlap.com/maimai-mobile/record/" class="p_r d_ib">
+		<img src="https://maimai.wahlap.com/maimai-mobile/img/menu_sub_record_playlog.png?ver=1.50" class="w_120"/>
+		<img src="https://maimai.wahlap.com/maimai-mobile/img/icon_on.png" class="submenu_selected" />	</a>
+	<a href="https://maimai.wahlap.com/maimai-mobile/record/musicGenre/" class="p_r d_ib">
+		<img src="https://maimai.wahlap.com/maimai-mobile/img/menu_sub_record_music.png?ver=1.50" class="w_120"/>
+			</a>
+	<a href="https://maimai.wahlap.com/maimai-mobile/record/course/" class="p_r d_ib">
+		<img src="https://maimai.wahlap.com/maimai-mobile/img/menu_sub_record_course.png?ver=1.50" class="w_120"/>
+			</a>
+	<img src="https://maimai.wahlap.com/maimai-mobile/img/menu_sub_record.png" class="w_120"/>
+</div>
+
+<img src="https://maimai.wahlap.com/maimai-mobile/img/title_playlog.png" class="title m_10"/>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 21:40</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>sølips</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/8043243d47cacaee.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.8301%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,840 / 2,199</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="3,1763905252" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 21:37</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>World&#039;s end loneliness</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/e341ba3d5adb60dd.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">100<span class="f_20">.3936%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,929 / 2,163</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="2,1763905059" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 21:34</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Excalibur ～Revived resolution～</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/75d7dea600e4b298.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.8819%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,666 / 1,941</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="1,1763904887" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/23 21:04</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Party☆People☆Princess</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/284cbd482551683b.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">95<span class="f_20">.6735%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/aaa.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,137 / 2,655</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="0,1763903091" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 21:01</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Glorious Crown</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/0c142b42f0e37845.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.6416%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,931 / 2,331</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="49,1763902881" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 20:58</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Cider P@rty</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/4839dab189ca43a1.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.3804%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,058 / 2,478</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="48,1763902688" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 20:54</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Heavenly Blast</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/b93bb5411292f1d8.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.3712%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,993 / 2,283</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="47,1763902481" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_remaster.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/23 20:43</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_remaster_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>熱異常</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/af9eb8410a85e0ec.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">96<span class="f_20">.8775%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/aaa.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,434 / 2,988</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="46,1763901798" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 20:38</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>吉原ラメント</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/f996e3e62d932b50.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">96<span class="f_20">.4934%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/aaa.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,020 / 2,547</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="45,1763901534" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 20:35</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>ツムギボシ</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/793b837b2593552d.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-m
+2000
+obile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">96<span class="f_20">.1248%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/aaa.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,408 / 2,976</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="44,1763901303" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_remaster.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 20:30</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_remaster_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>ラビットホール</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/463ca52e854f4869.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.5512%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ssplus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,420 / 2,766</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="43,1763901034" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/23 18:35</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>LAMIA</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/0cde431203c0df1c.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.9644%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ssplus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,918 / 2,277</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="42,1763894121" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 18:32</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Fragrance</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/2bb3f7cff734ce6a.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achiev
+8000
+ement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.9601%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">731 / 882</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="41,1763893951" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 18:29</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Cider P@rty</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/4839dab189ca43a1.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.0400%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,081 / 2,478</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="40,1763893742" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 18:25</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>患部で止まってすぐ溶ける～狂気の優曇華院</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/943b8a0563a24df8.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">96<span class="f_20">.5860%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/aaa.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,730 / 2,256</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="39,1763893533" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/23 18:00</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>raputa</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/486d317c19a52fd5.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.6052%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,279 / 2,664</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="38,1763892039" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 17:57</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>sølips</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/8043243d47cacaee.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.8221%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,863 / 2,199</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="37,1763891850" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_remaster.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 17:53</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_remaster_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>熱異常</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/af9eb8410a85e0ec.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">97<span class="f_20">.6049%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/s.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,461 / 2,988</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="36,1763891636" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 17:51</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Oshama Scramble!</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/64635a3534ce788a.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.3642%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,559 / 3,000</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="35,1763891461" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/23 17:29</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>TRUST</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/29d12992cfd1d731.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.3067%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,818 / 2,187</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="34,1763890181" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 17:26</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>SQUAD-Phvntom-</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/1f7f4a1e70e24919.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.4691%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,905 / 2,151</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="33,1763890002" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 17:22</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>とびだせ！TO THE COSMIC!!</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/a8dfce2488046508.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.4595%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,449 / 2,841</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="32,1763889768" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 17:19</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Comet Panto Men!</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/81c7f7c9a9042eab.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">95<span class="f_20">.6205%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/aaa.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,136 / 2,736</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="31,1763889573" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/23 16:51</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>躯樹の墓守</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/55a2c29fef3811ad.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">100<span class="f_20">.5124%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sssplus.png?ver=1.50" class="playlog_scorerank"/>
+										<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,932 / 2,163</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fcplus.png?ver=1.50" class="h_35 m_5 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="30,1763887873" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 16:47</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>偉大なる悪魔は実は大天使パトラちゃん様なのだ！</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/1a0ffd5bf37e729f.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.6702%</span></div>
+					<i
+125d1
+mg src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ssplus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,467 / 2,805</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="29,1763887633" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 16:44</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>JUMPIN&#039; JUMPIN&#039;</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/d3254db452d7bf2d.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">97<span class="f_20">.8250%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/s.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,432 / 1,773</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="28,1763887447" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 16:39</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Cider P@rty</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/4839dab189ca43a1.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">97<span class="f_20">.6151%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/s.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,075 / 2,478</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="27,1763887183" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/23 15:58</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>ツムギボシ</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/793b837b2593552d.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.6987%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,496 / 2,976</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="26,1763884722" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 15:55</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>folern</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/a904cc91a7d095dd.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.3513%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,706 / 2,001</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="25,1763884514" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 15:52</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>エンドマークに希望と涙を添えて</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/944deaf220b28eb0.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.1621%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,847 / 2,106</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="24,1763884332" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 15:49</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Churros Parlor</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/b1f8ab64f6dcdac3.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">100<span class="f_20">.3871%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,931 / 2,178</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc.png?ver=1.50" class="h_35 m_5 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="23,1763884140" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/23 13:10</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>とびだせ！TO THE COSMIC!!</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/a8dfce2488046508.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.2319%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,458 / 2,841</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="22,1763874633" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/23 13:07</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Titania</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/a6dce38910fd32d7.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.6422%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ssplus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,862 / 2,130</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="21,1763874448" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/23 13:04</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Valsqotch</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/d394210103ee76c3.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.6935%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ssplus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,192 / 2,559</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="20,1763874246" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/23 13:00</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>雷切-RAIKIRI-</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/be3cf43e80e9462e.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">100<span class="f_20">.2503%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,759 / 2,010</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="19,1763874039" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/19 20:39</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>星空パーティーチューン</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/34d250113b737f05.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.3023%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,462 / 2,817</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="18,1763555978" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/19 20:36</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Rainbow Rush Story</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/6090e7ca3c80cdc6.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.9139%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,385 / 2,712</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="17,1763555780" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/19 20:32</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>raputa</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/486d317c19a52fd5.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.1152%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,221 / 2,664</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="16,1763555575" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/19 20:25</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>ウミユリ海底譚</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/e2047e2898d1bc8c.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.1876%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">1,966 / 2,277</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="15,1763555137" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_remaster.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/19 20:21</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_remaster_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>熱異常</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/af9eb8410a85e0ec.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">97<span class="f_20">.8194%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/s.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,490 / 2,988</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="14,1763554869" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/19 20:18</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>星空パーティーチューン</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/34d250113b737f05.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.2128%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,444 / 2,817</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="13,1763554687" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/19 20:13</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>とびだせ！TO THE COSMIC!!</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/a8dfce2488046508.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.8607%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,387 / 2,841</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="12,1763554380" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/19 20:09</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>バカ通信</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/5826cc96ab759012.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.3928%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,634 / 2,991</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="11,1763554188" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/19 20:06</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>時計の国のジェミニ</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/68824ef167581ccf.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.6994%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ssplus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,849 / 2,070</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+																		<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="10,1763553979" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/19 19:50</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Cider P@rty</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/4839dab189ca43a1.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.6673%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ssplus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+														<div class="white p_r_5 f_15 f_r">2,081 / 2,478</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="9,1763553018" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/19 19:47</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Ai C</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/17fd83901e99d7b6.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">100<span class="f_20">.1250%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sss.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,451 / 1,596</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_2.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="8,1763552823" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 02</span>　<span class="v_b">2025/11/19 19:43</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>ピュグマリオンの咒文</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/f64908fc2a147935.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.9488%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,214 / 2,532</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="7,1763552632" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 01</span>　<span class="v_b">2025/11/19 19:40</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>ねぇ、壊れタ人形ハ何処へ棄テらレるノ？</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/b683efde84f7858e.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">96<span class="f_20">.8772%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/aaa.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,742 / 2,244</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/2nd.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="6,1763552411" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_master.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 04</span>　<span class="v_b">2025/11/19 19:21</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_master_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>テオ</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/d315e6c1c6b44779.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_dx.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+										<div class="playlog_achievement_txt t_r">98<span class="f_20">.7686%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/splus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block playlog_score_block_star f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">2,545 / 2,895</div>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/dxstar_1.png" class="playlog_deluxscore_star"/>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc_dummy.png?ver=1.50" class="h_35 m_5 f_l"/>
+												<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="5,1763551265" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+				<div class="p_10 t_l f_0 v_b">
+		<div class="playlog_top_container p_r">
+			<img src="https://maimai.wahlap.com/maimai-mobile/img/diff_expert.png" class="playlog_diff v_b"/>
+												<div class="sub_title t_c f_r f_11">
+				<span class="red f_b v_b">曲目 03</span>　<span class="v_b">2025/11/19 19:17</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="playlog_expert_container">
+			<div class="basic_block m_5 p_5 p_l_10 f_13 break"><img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/clear.png" class="w_80 f_r"/>Lividi</div>
+			<div class="p_r f_0">
+				<img loading="lazy" src="https://maimai.wahlap.com/maimai-mobile/img/Music/f614f3c776a56c88.png" class="music_img m_5 m_r_0 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/music_standard.png" class="playlog_music_kind_icon"/>
+								<div class="playlog_result_block m_t_5 f_l">
+					<div class="playlog_achievement_label_block">
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/achievement.png" />
+					</div>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_achievement_newrecord"/>
+										<div class="playlog_achievement_txt t_r">99<span class="f_20">.8012%</span></div>
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/ssplus.png?ver=1.50" class="playlog_scorerank"/>
+											<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="playlog_scoreline f_r" />
+					<div class="playlog_result_innerblock basic_block p_5 f_13">
+						<div class="playlog_score_block f_0">
+							<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/deluxscore.png" class="w_80"/>
+															<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/newrecord.png" class="playlog_deluxscore_newrecord"/>
+														<div class="white p_r_5 f_15 f_r">1,570 / 1,887</div>
+													</div>
+						<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/fc.png?ver=1.50" class="h_35 m_5 f_l"/>
+													<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/sync.png?ver=1.50" class="h_35 m_5 f_l"/>
+																				<img src="https://maimai.wahlap.com/maimai-mobile/img/playlog/1st.png" class="playlog_matching_icon f_r"/>
+																				<div class="clearfix"></div>
+					</div>
+										<form action="https://maimai.wahlap.com/maimai-mobile/record/playlogDetail/" method="get" accept-charset="utf-8" class="m_t_5 t_r">
+						<input type="hidden" name="idx" value="4,1763551066" />
+						<button type="submit" class="f_0"><img src="https://maimai.wahlap.com/maimai-mobile/img/btn_detail.png" class="w_84" /></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+		<footer class="f_0">
+			<div class="footer_marquee">
+			<div class="footer w_480">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480 50" preserveAspectRatio="none" style="height:50px">
+					<path d="M0,0 v25 q5,5 10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 t10,0 v-25 Z" fill="#7cbc29"></path>
+				</svg>
+				<div class="m_15 m_t_0 f_13">
+					<div class="m_5"><a href="https://maimai.wahlap.com/maimai-mobile/termsOfService/" target="_blank" class="white" rel="noopener">使用条款</a></div>
+					<div class="m_5"><a href="https://maimai.wahlap.com/maimai-mobile/sitePolicy/" target="_blank" class="white" rel="noopener">使用须知</a></div>
+					<div class="m_5"><a href="https://www.segafave.co.jp/en/privacy/" target="_blank" class="white" rel="noopener">私隐政策</a></div>
+				</div>
+				<img src="https://maimai.wahlap.com/maimai-mobile/img/line_02.png" class="w_430 m_b_10" />
+				<div class="f_l m_15 m_l_30 p_l_10">
+					<a href="http://sega.jp" target="_blank" rel="noopener"><img src="https://maimai.wahlap.com/maimai-mobile/img/logo_sega.png" /></a>
+					<div class="f_15 p_5">© SEGA</div>
+				</div>
+				<div class="m_15">
+					<img src="https://maimai.wahlap.com/maimai-mobile/img/logo_wahlap.png" /></a>
+					<div class="f_11 p_3"><a href="http://www.miitbeian.gov.cn" style="text-decoration:none; color: #fff" target="_blank" rel="noopener">粤ICP备05005783号</a></div>
+				</div>
+							</div>
+			</div>
+		</footer>
+	</div>
+	<img id="page-top" src="https://maimai.wahlap.com/maimai-mobile/img/btn_page_top.png" class="pointer">
+	<img id="page-bottom" src="https://maimai.wahlap.com/maimai-mobile/img/btn_page_bottom.png" class="pointer">
+	<script src="https://maimai.wahlap.com/maimai-mobile/js/jquery-3.3.1.min.js"></script>
+	<script src="https://maimai.wahlap.com/maimai-mobile/js/modaal.min.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-136087881-2', 'auto');
+		ga('send', 'pageview');
+
+		var scrollPoint = $('.scroll_point').length;
+		$('#page-top').click(function () {
+			if (scrollPoint > 0) {
+				var fromPos = Math.floor($(window).scrollTop());
+				var toPos   = 0;
+				$(".scroll_point").each(function() {
+					var targetPos = Math.floor($(this).offset().top);
+					if (location.pathname.split('/').pop() == "updateMusic") {
+						targetPos = targetPos - 284;
+					}
+					if (fromPos > targetPos) {
+						toPos = targetPos;
+					} else {
+						return false;
+					}
+				});
+				$('body,html').animate({scrollTop: toPos}, 500);
+			} else {
+				$('body,html').animate({scrollTop: 0}, 500);
+			}
+			return false;
+		});
+		$('#page-bottom').click(function () {
+			if (scrollPoint > 0) {
+				var fromPos = Math.floor($(window).scrollTop()) + 3;
+				var toPos   = Math.floor($(document).height());
+				$(".scroll_point").each(function() {
+					var targetPos = Math.floor($(this).offset().top);
+					if (location.pathname.split('/').pop() == "updateMusic") {
+						targetPos = targetPos - 284;
+					}
+					if (fromPos < targetPos) {
+						toPos = targetPos;
+						return false;
+					}
+				});
+				$('body,html').animate({scrollTop: toPos}, 500);
+			} else {
+				$('body,html').animate({scrollTop: $(document).height()}, 500);
+			}
+			return false;
+		});
+		function fadeOutPageBtn() {
+			$('#page-top').fadeOut(1500).animate({duration: 'slow', easing: 'linear'});
+			$('#page-bottom').fadeOut(1500).animate({duration: 'slow', easing: 'linear'});
+		}
+					var spmenu_toggle = $('.spmenu_toggle');
+			var spmenu_navigation = $('.spmenu_navigation');
+			spmenu_toggle.click(function() {
+				$(this).toggleClass('active');
+				if ($(this).hasClass('active')) {
+					spmenu_navigation.addClass('active');
+				} else {
+					spmenu_navigation.removeClass('active');
+				}
+			});
+			spmenu_navigation.click(function() {
+				spmenu_toggle.removeClass('active');
+				$(this).removeClass('active');
+			});
+				var timeLimit = 3*1000;
+		var timerId = setTimeout(fadeOutPageBtn, timeLimit);
+		$(window).scroll(function() {
+			if (!spmenu_navigation.is(':visible')) spmenu_navigation.css('display', 'block');
+			if (!$('#page-top').is(':visible')) $('#page-top').fadeIn();
+			if (!$('#page-bottom').is(':visible')) $('#page-bottom').fadeIn();
+			clearTimeout(timerId);
+			timerId = setTimeout(fadeOutPageBtn, timeLimit);
+							var visible = spmenu_toggle.is(':visible');
+				if ($(this).scrollTop() > 250) {
+					if (!visible)
+						spmenu_toggle.fadeIn().animate({'right': '5px'}, {duration: 500, queue: false});
+				} else {
+					if (visible) {
+						spmenu_toggle.fadeOut().animate({'right': '-100%'}, {duration: 500, queue: false});
+						if (spmenu_toggle.hasClass('active')) {
+							spmenu_toggle.removeClass('active');
+							spmenu_navigation.removeClass('active');
+						}
+					}
+				}
+					});
+	</script>
+	</body>
+</html>
+0
+

@@ -1,0 +1,27 @@
+{
+  "app": "com.tencent.mm",
+  "duration": "226ms",
+  "headers": {
+    "Host": "maimai.wahlap.com",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": "Mozilla/5.0 (Linux; Android 15; PJZ110 Build/AP3A.240617.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 XWEB/1160117 MMWEBSDK/20250201 MMWEBID/2253 MicroMessenger/8.0.57.2800(0x28003940) WeChat/arm64 Weixin GPVersion/1 NetType/WIFI Language/zh_CN ABI/arm64",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q\u003d0.9,image/avif,image/wxpic,image/tpg,image/webp,image/apng,*/*;q\u003d0.8,application/signed-exchange;v\u003db3;q\u003d0.7",
+    "X-Requested-With": "com.tencent.mm",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-User": "?1",
+    "Sec-Fetch-Dest": "document",
+    "Referer": "https://maimai.wahlap.com/maimai-mobile/home/",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
+    "Cookie": "_t\u003d31e1769d740ae3b07e44e7c0e7971d2c; userId\u003d757288807468480; friendCodeList\u003d848499806549865%2C421761195940674%2C792769322723866"
+  },
+  "method": "GET",
+  "protocol": "HTTP/1.1",
+  "remoteIp": "152.136.211.165",
+  "remotePort": 443,
+  "sessionId": "6b5372e9-8e2f-41ea-bee8-bcbaad60d2e7",
+  "time": "2025-11-25 02:02:06",
+  "url": "https://maimai.wahlap.com/maimai-mobile/record/"
+}

@@ -268,16 +268,29 @@ function loadToken() {
 }
 
 // 构建请求头
-function buildHeaders(token) {
-  return {
+function buildHeaders(token, options = {}) {
+  const headers = {
     'Host': 'maimai.wahlap.com',
     'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
     'User-Agent': CONFIG.userAgent,
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/wxpic,image/webp,*/*;q=0.8',
-    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/wxpic,image/tpg,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'X-Requested-With': 'com.tencent.mm',
     'Accept-Encoding': 'gzip, deflate',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
     'Cookie': `_t=${token.ult}; userId=${token.userId}`
   };
+
+  // 添加可选的headers
+  if (options.referer) {
+    headers['Referer'] = options.referer;
+    headers['Sec-Fetch-Site'] = 'same-origin';
+    headers['Sec-Fetch-Mode'] = 'navigate';
+    headers['Sec-Fetch-User'] = '?1';
+    headers['Sec-Fetch-Dest'] = 'document';
+  }
+
+  return headers;
 }
 
 // 测试连接
@@ -489,7 +502,10 @@ function parseRecordsHtml(html) {
 // 获取游玩记录
 async function fetchPlayHistory(token) {
   const url = `${CONFIG.baseUrl}/record/`;
-  const headers = buildHeaders(token);
+  // 添加Referer（模拟从首页跳转过来）
+  const headers = buildHeaders(token, {
+    referer: `${CONFIG.baseUrl}/home/`
+  });
 
   log('DEBUG', `请求URL: ${url}`);
 
