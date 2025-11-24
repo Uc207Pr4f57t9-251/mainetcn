@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-11-24T18:53:30.128Z",
+  "reason": "auth_error",
+  "request": {
+    "url": "https://maimai.wahlap.com/maimai-mobile/home/",
+    "method": "GET",
+    "headers": {
+      "Host": "maimai.wahlap.com",
+      "Connection": "keep-alive",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Linux; Android 15; PJZ110 Build/AP3A.240617.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 XWEB/1160117 MMWEBSDK/20250201 MMWEBID/2253 MicroMessenger/8.0.57.2800(0x28003940) WeChat/arm64 Weixin GPVersion/1 NetType/4G Language/zh_CN ABI/arm64",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/wxpic,image/tpg,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "X-Requested-With": "com.tencent.mm",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "_t=31e1769d740ae3b07e44e7c0e7971d2c; userId=3823414420475332"
+    }
+  },
+  "response": {
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+      "server": "nginx",
+      "date": "Mon, 24 Nov 2025 18:53:30 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "transfer-encoding": "chunked",
+      "connection": "keep-alive",
+      "set-cookie": [
+        "_t=31e1769d740ae3b07e44e7c0e7971d2c; expires=Thu, 22-Nov-2035 18:53:30 GMT; Max-Age=315360000; path=/"
+      ],
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate, no-cache",
+      "pragma": "no-cache",
+      "x-xss-protection": "1; mode=block, 1; mode=block",
+      "strict-transport-security": "max-age=31536000; includeSubDomains, max-age=31536000; includeSubDomains",
+      "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
+      "x-content-type-options": "nosniff, nosniff"
+    },
+    "dataLength": 7508,
+    "dataPreview": "<!DOCTYPE html>\n<html lang=\"zh\">\n<head>\n\t<meta charset=\"UTF-8\" />\n\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,user-scalable=yes\" />\n\t<script>\n\t\tvar baseW = 768;\n\t\tvar iOSW = 0;\n\t\tvar ua = navigator.userAgent.toLowerCase();\n\t\tvar isiOS = (ua.indexOf(\"iphone\") > -1) || (ua.indexOf(\"ipod\") > -1) || (ua.indexOf(\"ipad\") > -1);\n\t\tif(isiOS){\n\t\t\tiOSW = document.documentElement.clientWidth;\n\t\t}\n\t\twindow.addEventListener(\"resize\", updateMetaViewport, false);\n\t\twindow.addEventListe"
+  }
+}
